@@ -29,12 +29,8 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0",
-<<<<<<< HEAD
-    "prettier": "^1.19.1"
-=======
     "prettier": "^1.13.7",
     "sequelize": "^5.21.5",
     "sequelize-cli": "^5.5.1"
->>>>>>> 9ff5c78cca686e8cd4286ae32ae27c6025bb3391
   }
 }
