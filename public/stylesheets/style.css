@@ -2,3 +2,22 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+body{
+  background-color: #F9C48E;
+}
+
+footer{
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  /* padding:20px; */
+  height:50px;
+}
+h2{
+  font-size: large;
+}
+p{
+  font-size: 14px;
+}
