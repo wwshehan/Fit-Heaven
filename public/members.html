@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Passport Authentication</title>
+    <title>Your Fit</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"
-    />
+    /> -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
     <link href="stylesheets/style.css" rel="stylesheet" />
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light ">
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark" >
       <a class="navbar-brand" href="./members.html">
         <h1>YourFit</h1>
       </a>
@@ -49,8 +48,8 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <h1 class="text-primary">Welcome <span class="member-name"></span></h1>
+        <div class="col">
+          <h1 class="text-primary text-center">Welcome <span class="member-name"></span></h1>
         </div>
       </div>
       <div class="row">
@@ -62,18 +61,20 @@
           <p>Goal Weight:</p>
         </div>
         <div class="col">
-          <h2 class="text-primary">Number Of Days Worked Out This Week</h2>
+          <h2 class="text-primary">Workouts This Week</h2>
           <p>Days:</p>
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <h2 class="text-primary"><a href="saved.html">Your Past Workouts</a></h2>
+          <button class="text-primary"><a href="saved.html">Your Past Workouts</a></button>
       </div>
       </div>
     </div>
+
     <footer class="bg-primary"><p> &#169; Copyright</p></footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/members.js"></script>
   </body>
 </html>

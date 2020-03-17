@@ -3,7 +3,7 @@ form.login {
   margin-top: 50px;
 }
 body{
-  background-color: #F8B776;
+  background-color: #F9C48E;
 }
 
 footer{
@@ -14,4 +14,10 @@ footer{
   text-align: center;
   /* padding:20px; */
   height:50px;
+}
+h2{
+  font-size: large;
+}
+p{
+  font-size: 14px;
 }
