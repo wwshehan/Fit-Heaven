@@ -1,0 +1,100 @@
+incline barbell bench press,advanced,chest,barbell
+flat barbell bench press,moderate,chest,barbell
+decline barbell bench press,advanced,chest,barbell
+guillotine (neck) press,advanced,chest,barbell
+close-grip bench press,moderate,chest,barbell
+incline dumbbell bench press,advanced,chest,dumbbell
+flat dumbbell bench press,moderate,chest,dumbbell
+decline dumbbell bench press,advanced,chest,dumbbell
+dumbbell pullover,advanced,chest,dumbbell
+dumbbell chest fly,moderate,chest,dumbbell
+dumbbell floor press,moderate,chest,dumbbell
+cable chest fly,beginner,chest,cable/machine
+cable chest press,beginner,chest,cable/machine
+single-arm cable crossover,beginner,chest,cable/machine
+incline machine bench press,beginner,chest,cable/machine
+flat machine bench press,beginner,chest,cable/machine
+pec deck,beginner,chest,cable/machine
+dip machine,beginner,chest,cable/machine
+standard deadlift,advanced,back,barbell
+sumo deadlift,advanced,back,barbell
+romanian deadlift,advanced,back,barbell
+bent over rows,moderate,back,barbell
+pendley rows,moderate,back,barbell
+t-bar rows,moderate,back,barbell
+barbell shrugs,moderate,back,barbell
+barbell chest supported rows,moderate,back,barbell
+dumbbell romanian deadlifts,advanced,back,dumbbell
+single-arm rows,beginner,back,dumbbell
+dumbbell shrugs,beginner,back,dumbbell
+dumbbell chest supported rows,moderate,back,dumbbell
+lat pulldowns,beginner,back,cable/machine
+seated rows,beginner,back,cable/machine
+standing push down,beginner,back,cable/machine
+hyperextensions,moderate,back,cable/machine
+chin ups / pullups,moderate,back,cable/machine
+barbell back squats,advanced,legs,barbell
+barbell front squats,advanced,legs,barbell
+barbell lunges,advanced,legs,barbell
+barbell bulgarian split squat,advanced,legs,barbell
+barbell step ups,moderate,legs,barbell
+good mornings,moderate,legs,barbell
+romanian deadlifts,advanced,legs,barbell
+barbell hip thrusts,advanced,legs,barbell
+standing calf raises,beginner,legs,barbell
+dumbbell squat,moderate,legs,dumbbell
+goblet squat,moderate,legs,dumbbell
+dumbbell lunges,advanced,legs,dumbbell
+dumbbell bulgarian split squat,advanced,legs,dumbbell
+dumbbell step ups,moderate,legs,dumbbell
+dumbbell romanian deadlifts,advanced,legs,dumbbell
+dumbbell hip thrusts,advanced,legs,dumbbell
+dumbbell glute bridges,advanced,legs,dumbbell
+dumbbell standing calf raises,beginner,legs,dumbbell
+hack squat machine,moderate,legs,cable/machine
+leg press,moderate,legs,cable/machine
+leg extension,beginner,legs,cable/machine
+leg curl,beginner,legs,cable/machine
+seated calf raise,beginner,legs,cable/machine
+standing barbell shoulder press,advanced,shoulders,barbell
+seated barbell shoulder press,moderate,shoulders,barbell
+push press,moderate,shoulders,barbell
+standing dumbbell shoulder press,moderate,shoulders,dumbbell
+seated dumbbell shoulder press,moderate,shoulders,dumbbell
+arnold press,moderate,shoulders,dumbbell
+cuban press,moderate,shoulders,dumbbell
+single arm dumbbell press,moderate,shoulders,dumbbell
+dumbbell lateral raises,beginner,shoulders,dumbbell
+dumbbell front raises,beginner,shoulders,dumbbell
+dumbbell reverse flys,beginner,shoulders,dumbbell
+machine shoulder press,beginner,shoulders,cable/machine
+machine lat raise,beginner,shoulders,cable/machine
+cable lat raise,beginner,shoulders,cable/machine
+cable front raise,beginner,shoulders,cable/machine
+cable reverse fly,beginner,shoulders,cable/machine
+cable face pulls,beginner,shoulders,cable/machine
+barbell bicep curl,moderate,bicep,barbell
+e-z bar bicep curl,moderate,bicep,barbell
+barbell preacher curl,moderate,bicep,barbell
+concentration curl,beginner,bicep,dumbbell
+dumbbell bicep curl,beginner,bicep,dumbbell
+hammer curl,beginner,bicep,dumbbell
+incline bench dumbbell curl,beginner,bicep,dumbbell
+cable bicep curl,beginner,bicep,cable/machine
+bicep machine curl,beginner,bicep,cable/machine
+skull crusher,advanced,tricep,barbell
+tricep kickbacks,moderate,tricep,dumbbell
+standing overhead extension,advanced,tricep,dumbbell
+seated overhead extension,advanced,tricep,dumbbell
+machine tricep extension,beginner,tricep,cable/machine
+cable tricep pulldown,beginner,tricep,cable/machine
+dip machine,beginner,tricep,cable/machine
+barbell ab rollouts,advanced,abs,barbell
+dumbbell side bends,beginner,abs,dumbbell
+cable crunches,beginner,abs,cable/machine
+ab crunch machine,beginner,abs,cable/machine
+leg raises,moderate,abs,bodyweight
+knee raises,moderate,abs,bodyweight
+ab crunches,beginner,abs,bodyweight
+russian twist,beginner,abs,bodyweight
+plank hold,beginner,abs,bodyweight
