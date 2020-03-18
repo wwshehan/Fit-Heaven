@@ -2,6 +2,7 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+<<<<<<< HEAD
 
 body { 
   background-color: white(228, 227, 253);
@@ -43,3 +44,24 @@ body {
   bottom: 0px;
   height: 20px; 
 }
+=======
+body{
+  background-color: #F9C48E;
+}
+
+footer{
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  /* padding:20px; */
+  height:50px;
+}
+h2{
+  font-size: large;
+}
+p{
+  font-size: 14px;
+}
+>>>>>>> 8be1aa86de763815c9725a9dadca66221482f1c2
