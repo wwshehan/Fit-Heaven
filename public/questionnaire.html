@@ -1,0 +1,307 @@
+<!DOCTYPE hmtl>
+<html lang="en">
+
+<head>
+  <title>Questionnaire</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale =1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap" rel="stylesheet">
+  <link href="stylesheets/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        Welcome to Gym Heaven
+      </div>
+    </div>
+  </nav>
+
+  <div id="questionBox" class="jumbotron">
+
+    <div class="first">
+      Gender:
+      <br><br>
+      <button type="button" class="btn-gender btn-primary">Male</button> <br><br>
+
+      <button type="button" class="btn-gender btn-primary">Female</button> <br><br>
+    </div>
+
+    <div class="second" style="display: none;">
+      <form>
+
+        <div class="col-auto">
+          <div class="form-check mb-2">
+
+            Please Enter Your Weight:
+            </label>
+          </div>
+        </div>
+        <div class="form-row align-items-center">
+
+          <div class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+
+            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+          </div>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn-weight btn-primary mb-2">Submit</button>
+        </div>
+    </div>
+    </form>
+
+
+
+    <div class="third" style="display: none;">
+      Please select which equipment you have access to: <br><br>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="bodyweight" id="defaultCheckBody">
+        <label class="form-check-label" for="defaultCheck1">
+          Bodyweight
+        </label><br>
+        <input class="form-check-input" type="checkbox" name="dumbbell" id="defaultCheckDumbbell">
+        <label class="form-check-label" for="defaultCheck1">
+          Dumbbell
+        </label><br>
+        <input class="form-check-input" type="checkbox" name="barbell" id="defaultCheckBarbell">
+        <label class="form-check-label" for="defaultCheck1">
+          Barbell
+        </label><br>
+        <input class="form-check-input" type="checkbox" name="cable/machine" id="defaultCheckCableMachine">
+        <label class="form-check-label" for="defaultCheck1">
+          Cable/Machine
+        </label><br>
+
+        <button type="submit" class="btn-equip btn-primary mb-2">Submit</button>
+
+      </div>
+
+    </div>
+
+    <div class="fourth" style="display:none;">
+      Please select a level of fitness:
+      <br><br>
+      <button type="button" class="btn-level btn-primary">Beginner</button> <br><br>
+
+      <button type="button" class="btn-level btn-primary">Moderate</button> <br><br>
+
+      <button type="button" class="btn-level btn-primary">Advanced</button> <br><br>
+
+    </div>
+
+    <div class="fifth" style="display:none;">
+      Please select which muscle(s) you have wish to focus on: <br><br>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="chest" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Chest
+        </label><br>
+        <input class="form-check-input" type="checkbox" name="back" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Back
+        </label><br>
+        <input class="form-check-input" type="checkbox" name="legs" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Legs
+        </label><br>
+        <input class="form-check-input" type="checkbox" name="shoulders" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Shoulders
+        </label><br>
+        <input class="form-check-input" type="checkbox" name="biceps" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Biceps
+        </label><br>
+        <input class="form-check-input" type="checkbox" name="abs" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Abs
+        </label><br>
+
+        <button type="submit" class="btn-muscle btn-primary mb-2">Submit</button>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+
+  <footer class="page-footer fixed-bottom">
+
+
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href=""> Group Information</a>
+    </div>
+
+
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a4101eefc4.js" crossorigin="anonymous">
+  </script>
+
+
+
+
+
+
+
+
+
+
+  <script>
+
+    let answers = [];
+
+    $(".btn-gender").click(function (event) {
+      event.preventDefault();
+      $(".first").hide();
+      $(".second").show();
+
+      console.log(this.innerText);
+      answers.push(this.innerText);
+
+      console.log(answers);
+
+    })
+
+    $(".btn-weight").click(function (event) {
+      event.preventDefault();
+      $(".first").hide();
+      $(".second").hide();
+      $(".third").show();
+
+      let x = $("#inlineFormInputGroup").val();
+
+      answers.push(x);
+      console.log(answers);
+
+    })
+
+    $(".btn-equip").click(function (event) {
+      event.preventDefault();
+      $(".first").hide();
+      $(".second").hide();
+      $(".third").hide();
+      $(".fourth").show();
+
+      let bodyweight = $('input[name="bodyweight"]:checked').serialize();
+      let dumbbell = $('input[name="dumbbell"]:checked').serialize();
+      let barbell = $('input[name="barbell"]:checked').serialize();
+      let cableMachine = $('input[name="cable/machine"]:checked').serialize();
+
+     
+
+      if (bodyweight != "") {
+
+        answers.push("bodyweight");
+      }
+
+      if (dumbbell != "") {
+
+        answers.push("dumbbell");
+      }
+
+      if (barbell != "") {
+
+        answers.push("barbell");
+      }
+
+      if (cableMachine != "") {
+        answers.push("cable/machine");
+      }
+
+
+
+    })
+
+    $(".btn-level").click(function (event) {
+      event.preventDefault();
+      $(".first").hide();
+      $(".second").hide();
+      $(".third").hide();
+      $(".fourth").hide();
+      $(".fifth").show();
+
+      console.log(this.innerText);
+      answers.push(this.innerText);
+
+      console.log(answers);
+    })
+
+    $(".btn-muscle").click(function (event) {
+      event.preventDefault();
+      $(".first").hide();
+      $(".second").hide();
+      $(".third").hide();
+      $(".fourth").hide();
+      $(".fifth").hide();
+
+
+      let chest = $('input[name="chest"]:checked').serialize();
+      let back = $('input[name="back"]:checked').serialize();
+      let legs = $('input[name="legs"]:checked').serialize();
+      let shoulders = $('input[name="shoulders"]:checked').serialize();
+      let biceps = $('input[name="biceps"]:checked').serialize();
+      let abs = $('input[name="abs"]:checked').serialize();
+
+
+
+      if (chest != "") {
+
+        answers.push("chest");
+      }
+
+      if (back != "") {
+
+        answers.push("back");
+      }
+
+      if (legs != "") {
+
+        answers.push("legs");
+      }
+
+      if (shoulders != "") {
+        answers.push("shoulders");
+      }
+
+      if (biceps != "") {
+
+        answers.push("biceps");
+      }
+
+      if (abs != "") {
+        answers.push("abs");
+      }
+
+    })
+
+    function updateUser(answers) {
+
+      $.ajax({
+        method: "PUT",
+        url: "/api/user_data",
+        data: answers
+      })
+    }
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>
