@@ -47,18 +47,42 @@ module.exports = function(app) {
       res.json({
         email: req.user.email,
         id: req.user.id,
+<<<<<<< HEAD
         gender: req.user.gender
+=======
+        gender: req.user.gender,
+        level: req.user.level,
+        weight: req.user.weight
+>>>>>>> a7da179244d74795408715ab87302cc79a5bd0bf
       });
     }
   });
-  app.get("/api/findExercises/:muscle", function(req, res) {
-    console.log(req.params.muscle);
-    db.Exercise.findAll({
+
+  app.put("/api/user_data", function(req, res) {
+    db.User.update(req.body, {
       where: {
-        muscle: req.params.muscle
+        gender: req.body.gender,
+        weight: req.body.weight,
+        level: req.body.level
       }
-    }).then(function(dbMuscle) {
-      res.json(dbMuscle);
+    }).then(function(dbUser) {
+      res.json(dbUser);
+    });
+  });
+
+  app.get("/api/findExercises", (req, res) => {
+    db.Exercise.findAll({
+      // console.log(req.query.name);
+      // console.log(req.query.experience);
+      // console.log(req.query.muscle);
+      // console.log(req.query.equipment);
+      where: {
+        muscle: req.query.muscle,
+        level: req.query.level,
+        equipment: req.query.equipment
+      }
+    }).then(arrayOfExercises => {
+      res.json(arrayOfExercises);
     });
   });
 };

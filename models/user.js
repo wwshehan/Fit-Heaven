@@ -21,7 +21,15 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: true
     },
+<<<<<<< HEAD
     fitnessLevel: {
+=======
+    level: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    weight: {
+>>>>>>> a7da179244d74795408715ab87302cc79a5bd0bf
       type: DataTypes.STRING,
       allowNull: true
     }

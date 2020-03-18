@@ -310,6 +310,7 @@
     })
 
     function updateUser() {
+<<<<<<< HEAD
       console.log(answers);
       
       $.ajax({
@@ -321,10 +322,26 @@
       })
     }
 
+=======
+      // console.log(answers);
+        $.ajax({
+            method: "PUT",
+            url: "/api/user_data",
+            data: {
+              gender: answers[0],
+              level: answers[3],
+              weight: answers[1]
+            }
+        }).then(() => {
+          window.location.href = './members.html';
+        })
+      }
+>>>>>>> a7da179244d74795408715ab87302cc79a5bd0bf
 
     $(".btn-end").click(function (event) {
       event.preventDefault();
 
+<<<<<<< HEAD
       console.log(JSON.stringify(answers[0]));
 
       updateUser();
@@ -334,12 +351,24 @@
     })
 
 
+=======
+    
+     updateUser();
+
+    })
+
+>>>>>>> a7da179244d74795408715ab87302cc79a5bd0bf
 
     $(".btn-muscle").click(event => {
       event.preventDefault();
 
+<<<<<<< HEAD
       $.ajax({
         type: "POST",
+=======
+    $.ajax({
+        type: "GET",
+>>>>>>> a7da179244d74795408715ab87302cc79a5bd0bf
         url: "/api/findExercises",
         data: {
           level: answers[3],
