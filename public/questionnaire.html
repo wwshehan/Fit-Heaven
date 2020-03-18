@@ -176,7 +176,7 @@
 
   <script>
 
-    let answers = [];
+    let answers = {};
 
     $(".btn-gender").click(function (event) {
       event.preventDefault();
@@ -184,7 +184,7 @@
       $(".second").show();
 
       console.log(this.innerText);
-      answers.push(this.innerText);
+      answers.gender = (this.innerText);
 
       console.log(answers);
 
@@ -198,8 +198,8 @@
 
       let x = $("#inlineFormInputGroup").val();
 
-      answers.push(x);
-      console.log(answers);
+      // answers.push(x);
+      // console.log(answers);
 
     })
 
@@ -248,10 +248,10 @@
       $(".fourth").hide();
       $(".fifth").show();
 
-      console.log(this.innerText);
-      answers.push(this.innerText);
+      // console.log(this.innerText);
+      // answers.push(this.innerText);
 
-      console.log(answers);
+      // console.log(answers);
     })
 
     $(".btn-muscle").click(function (event) {
@@ -309,14 +309,15 @@
 
     })
 
-    function updateUser(answers) {
-
+    function updateUser() {
+      console.log(answers);
+      
       $.ajax({
         method: "POST",
         url: "/api/user_data",
         data: answers
       }).then(function () {
-        window.location.href = './members.html';
+        window.location.href = 'members.html';
       })
     }
 
@@ -324,7 +325,9 @@
     $(".btn-end").click(function (event) {
       event.preventDefault();
 
-      updateUser(answers);
+      console.log(JSON.stringify(answers[0]));
+
+      updateUser();
 
 
 
