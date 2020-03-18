@@ -122,6 +122,10 @@
         <label class="form-check-label" for="defaultCheck1">
           Biceps
         </label><br>
+        <input class="form-check-input" type="checkbox" name="triceps" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Triceps
+        </label><br>
         <input class="form-check-input" type="checkbox" name="abs" id="defaultCheck1">
         <label class="form-check-label" for="defaultCheck1">
           Abs
@@ -265,6 +269,7 @@
       let legs = $('input[name="legs"]:checked').serialize();
       let shoulders = $('input[name="shoulders"]:checked').serialize();
       let biceps = $('input[name="biceps"]:checked').serialize();
+      let triceps = $('input[name="triceps"]:checked').serialize();
       let abs = $('input[name="abs"]:checked').serialize();
 
 
@@ -293,6 +298,11 @@
         answers.push("biceps");
       }
 
+      if (triceps != "") { 
+        
+        answers.push("triceps");
+      }
+
       if (abs != "") {
         answers.push("abs");
       }
@@ -311,7 +321,7 @@
     function updateUser(answers) {
 
       $.ajax({
-        method: "PUT",
+        method: "POST",
         url: "/api/user_data",
         data: answers
       })
