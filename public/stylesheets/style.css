@@ -2,49 +2,6 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
-<<<<<<< HEAD
-
-body { 
-  background-color: white(228, 227, 253);
-  text-align: center;
-}
-
-
-.navbar { 
-  background-color: rgb(61, 166, 252);
-  border-bottom: 2.5px solid rgba(248, 190, 82, 0.842);
-  font-size: 24px;
-  color: white;
-}
-
-.btn { 
-  margin: 5px;
-}
-
-
-#questionBox { 
-  background-color: whitesmoke;
-  width: 45%;
-  height: 400px;
-  margin: auto;
-  border-radius: 5%;
-  border: 2px solid rgb(255, 231, 187);
-  color: black;
-  font-size: 24px;
-  font-family: 'Baloo Da 2', cursive;
-  padding: 15px;
-  text-align: left;
-}
-
-
-.page-footer { 
-  background-color: rgb(255, 231, 187);
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-  height: 20px; 
-}
-=======
 body{
   background-color: #F9C48E;
 }
@@ -64,4 +21,3 @@ h2{
 p{
   font-size: 14px;
 }
->>>>>>> 8be1aa86de763815c9725a9dadca66221482f1c2
