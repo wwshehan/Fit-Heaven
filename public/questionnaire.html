@@ -23,29 +23,37 @@
   <div id="questionBox" class="jumbotron">
 
     <div class="first">
+      <form action="POST" action="members.html" >
       Gender:
       <br><br>
       <button type="button" class="btn-gender btn-primary">Male</button> <br><br>
 
       <button type="button" class="btn-gender btn-primary">Female</button> <br><br>
+    </form>
     </div>
 
     <div class="second" style="display: none;">
       <form>
-
+        
         <div class="col-auto">
           <div class="form-check mb-2">
 
-            <label>Please Enter Your Weight:
+            Please Enter Your Weight:
+
             </label>
           </div>
         </div>
+
         <div class="form-row align-items-center">
 
           <div class="col-auto">
+            
+
             <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+            
           </div>
         </div>
+
         <div class="col-auto">
           <button type="submit" class="btn-weight btn-primary mb-2">Submit</button>
         </div>
@@ -122,6 +130,8 @@
         <button type="submit" class="btn-muscle btn-primary mb-2">Submit</button>
 
       </div>
+
+
     </div>
 
     <div class="sixth" style="display: none; text-align: center;">
@@ -247,6 +257,7 @@
       $(".third").hide();
       $(".fourth").hide();
       $(".fifth").hide();
+      $(".sixth").show();
 
 
       let chest = $('input[name="chest"]:checked').serialize();
@@ -301,7 +312,7 @@
 
       $.ajax({
         method: "PUT",
-        url: "/api/User",
+        url: "/api/user_data",
         data: answers
       })
     }
