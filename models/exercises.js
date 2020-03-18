@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Exercises = sequelize.define("Exercises", {
+  var Exercises = sequelize.define("Exercise", {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
