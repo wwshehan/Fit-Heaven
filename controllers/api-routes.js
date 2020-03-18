@@ -50,7 +50,7 @@ module.exports = function(app) {
       });
     }
   });
-  app.get("/api/exercises/:muscle", function(req, res) {
+  app.get("/api/findExercises/:muscle", function(req, res) {
     console.log(req.params.muscle);
     db.Exercise.findAll({
       where: {
