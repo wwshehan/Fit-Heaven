@@ -136,7 +136,7 @@
 
     <div class="sixth" style="display: none; text-align: center;">
       <br><br><br><br>
-      <button type="submit" class="btn-end btn-primary mb-2" >Questionnaire</button>
+      <button type="submit" class="btn-end btn-primary mb-2" >Complete Questionnaire</button>
     </div>
 
 
@@ -303,7 +303,9 @@
     $(".btn-end").click(function (event) { 
       event.preventDefault();
 
-     window.location.href('./members.html')
+     window.location.href = './members.html';
+     updateUser(answers);
+
     })
 
     function updateUser(answers) {
