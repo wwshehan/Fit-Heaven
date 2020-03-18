@@ -124,6 +124,12 @@
       </div>
     </div>
 
+    <div class="sixth" style="display: none; text-align: center;">
+      <br><br><br><br>
+      <button type="submit" class="btn-end btn-primary mb-2" >Complete Questionnaire</button>
+    </div>
+
+
   </div>
 
 
@@ -279,6 +285,15 @@
       if (abs != "") {
         answers.push("abs");
       }
+
+    })
+
+
+    $(".btn-end").click(function (event) { 
+      event.preventDefault();
+
+     window.location.href = './members.html';
+     updateUser(answers);
 
     })
 
