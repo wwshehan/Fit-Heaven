@@ -60,7 +60,6 @@ module.exports = function(app) {
   //   });
   // });
   app.get("/api/findExercises", (req, res) => {
-
     db.Exercise.findAll({
       // console.log(req.query.name);
       // console.log(req.query.experience);
