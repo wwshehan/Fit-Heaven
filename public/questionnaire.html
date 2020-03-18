@@ -299,6 +299,18 @@
 
     })
 
+    function updateUser(answers) {
+
+        $.ajax({
+            method: "PUT",
+            url: "/api/user_data",
+            data: {
+              gender: "answers[0]",
+              level: answers[3],
+              weight: answers[1]
+            }
+        })
+      }
 
     $(".btn-end").click(function (event) { 
       event.preventDefault();
@@ -308,16 +320,8 @@
 
     })
 
-    function updateUser(answers) {
 
-      $.ajax({
-        method: "PUT",
-        url: "/api/user_data",
-        data: answers
-      })
-    }
-
-    $(".btn-muscle").click(event => {
+    $(".btn-muscle").click(answers, event => {
     event.preventDefault();
 
     $.ajax({
