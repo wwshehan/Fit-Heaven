@@ -327,7 +327,21 @@
       })
     }
 
+    $(".btn-muscle").click(event => {
+    event.preventDefault();
 
+    $.ajax({
+        type: "POST",
+        url: "/api/findExercises",
+        data: {
+            level: answers[3],
+            muscle: answers[4],
+            equipment: answers[2]
+        }
+    }).then(data => {
+        console.log(data);
+    })
+})
 
 
   </script>
