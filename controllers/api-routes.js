@@ -47,25 +47,27 @@ module.exports = function(app) {
       res.json({
         email: req.user.email,
         id: req.user.id,
-<<<<<<< HEAD
-        gender: req.user.gender
-=======
         gender: req.user.gender,
         level: req.user.level,
         weight: req.user.weight
->>>>>>> a7da179244d74795408715ab87302cc79a5bd0bf
       });
     }
   });
 
+  app.get("/api/user_data/:id", function(req, res) {
+    db.User.findByPk(req.params.id)
+      .then(user => res.json(user))
+      .catch(err => res.status(500).json(err));
+  });
+
   app.put("/api/user_data", function(req, res) {
+    console.log(req.user.id);
     db.User.update(req.body, {
       where: {
-        gender: req.body.gender,
-        weight: req.body.weight,
-        level: req.body.level
+        id: req.user.id
       }
     }).then(function(dbUser) {
+      console.log("NEWUSER" + dbUser);
       res.json(dbUser);
     });
   });
