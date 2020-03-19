@@ -3,6 +3,8 @@ var express = require("express");
 var session = require("express-session");
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
+// eslint-disable-next-line no-unused-vars
+var connection;
 
 // Setting up port and requiring models for syncing
 var PORT = process.env.PORT || 8080;
