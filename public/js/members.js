@@ -3,5 +3,13 @@ $(document).ready(function() {
   // and updates the HTML on the page
   $.get("/api/user_data").then(function(data) {
     $(".member-name").text(data.email);
+    $("#weight").text(data.id);
   });
+
+  $.get("/api/user_data/:id").then(function(data) {
+    console.log(data);
+    $("#weight").text(data.weight);
+  });
+
+  console.log($("#weight").html());
 });

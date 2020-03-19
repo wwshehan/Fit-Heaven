@@ -23,15 +23,18 @@
   <div id="questionBox" class="jumbotron">
     <form method="POST" action="members.html" >
     <div class="first">
-      Gender:
-      <br><br>
-      <button type="button" class="btn-gender btn-primary">Male</button> <br><br>
+      <form action="POST" action="members.html">
+        Gender:
+        <br><br>
+        <button type="button" class="btn-gender btn-primary">Male</button> <br><br>
 
-      <button type="button" class="btn-gender btn-primary">Female</button> <br><br>
+        <button type="button" class="btn-gender btn-primary">Female</button> <br><br>
+      </form>
     </div>
 
     <div class="second" style="display: none;">
-        
+      <form>
+
         <div class="col-auto">
           <div class="form-check mb-2">
 
@@ -44,10 +47,10 @@
         <div class="form-row align-items-center">
 
           <div class="col-auto">
-            
+
 
             <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
-            
+
           </div>
         </div>
 
@@ -118,6 +121,10 @@
         <label class="form-check-label" for="defaultCheck1">
           Biceps
         </label><br>
+        <input class="form-check-input" type="checkbox" name="triceps" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Triceps
+        </label><br>
         <input class="form-check-input" type="checkbox" name="abs" id="defaultCheck1">
         <label class="form-check-label" for="defaultCheck1">
           Abs
@@ -132,7 +139,7 @@
 
     <div class="sixth" style="display: none; text-align: center;">
       <br><br><br><br>
-      <button type="submit" class="btn-end btn-primary mb-2" >Complete Questionnaire</button>
+      <button type="submit" class="btn-end btn-primary mb-2">Complete Questionnaire</button>
     </div>
 
   </form>
@@ -175,7 +182,7 @@
       $(".first").hide();
       $(".second").show();
 
-      console.log(this.innerText);
+      
       answers.push(this.innerText);
 
       console.log(answers);
@@ -207,7 +214,7 @@
       let barbell = $('input[name="barbell"]:checked').serialize();
       let cableMachine = $('input[name="cable/machine"]:checked').serialize();
 
-     
+
 
       if (bodyweight != "") {
 
@@ -261,6 +268,7 @@
       let legs = $('input[name="legs"]:checked').serialize();
       let shoulders = $('input[name="shoulders"]:checked').serialize();
       let biceps = $('input[name="biceps"]:checked').serialize();
+      let triceps = $('input[name="triceps"]:checked').serialize();
       let abs = $('input[name="abs"]:checked').serialize();
 
 
@@ -289,6 +297,11 @@
         answers.push("biceps");
       }
 
+      if (triceps != "") {
+
+        answers.push("triceps");
+      }
+
       if (abs != "") {
         answers.push("abs");
       }
@@ -296,7 +309,11 @@
     })
 
     function updateUser() {
-      // console.log(answers);
+      console.log({
+              gender: answers[0],
+              level: answers[3],
+              weight: answers[1]
+            });
         $.ajax({
             method: "PUT",
             url: "/api/user_data",
@@ -307,10 +324,11 @@
             }
         }).then(() => {
           window.location.href = './members.html';
+          
         })
       }
 
-    $(".btn-end").click(function (event) { 
+    $(".btn-end").click(function (event) {
       event.preventDefault();
 
     
@@ -320,20 +338,20 @@
 
 
     $(".btn-muscle").click(event => {
-    event.preventDefault();
+      event.preventDefault();
 
     $.ajax({
         type: "GET",
         url: "/api/findExercises",
         data: {
-            level: answers[3],
-            muscle: answers[4],
-            equipment: answers[2]
+          level: answers[3],
+          muscle: answers[4],
+          equipment: answers[2]
         }
-    }).then(data => {
+      }).then(data => {
         console.log(data);
+      })
     })
-})
 
 
   </script>
