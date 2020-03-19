@@ -4,7 +4,7 @@ $(document).ready(function() {
   $.get("/api/user_data").then(function(data) {
     console.log(data);
     $(".member-name").text(data.email);
-    $("#weight").text(data.id);
+    $("#weight").text(data.weight);
   });
   console.log($("#weight").html());
 });
