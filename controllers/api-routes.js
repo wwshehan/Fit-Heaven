@@ -42,15 +42,25 @@ module.exports = function(app) {
       // The user is not logged in, send back an empty object
       res.json({});
     } else {
-      // Otherwise send back the user's email and id
-      // Sending back a password, even a hashed password, isn't a good idea
-      res.json({
-        email: req.user.email,
-        id: req.user.id,
-        gender: req.user.gender,
-        level: req.user.level,
-        weight: req.user.weight
-      });
+      db.User.findAll({
+        where: {
+          email: req.user.email,
+          gender: req.user.gender,
+          level: req.user.level,
+          weight: req.user.weight
+        }
+      })
+        // Otherwise send back the user's email and id
+        // Sending back a password, even a hashed password, isn't a good idea
+        .then(
+          res.json({
+            email: req.user.email,
+            id: req.user.id,
+            gender: req.user.gender,
+            level: req.user.level,
+            weight: req.user.weight
+          })
+        );
     }
   });
 
@@ -68,10 +78,6 @@ module.exports = function(app) {
 
   app.get("/api/findExercises", (req, res) => {
     db.Exercise.findAll({
-      // console.log(req.query.name);
-      // console.log(req.query.experience);
-      // console.log(req.query.muscle);
-      // console.log(req.query.equipment);
       where: {
         muscle: req.query.muscle,
         level: req.query.level,
