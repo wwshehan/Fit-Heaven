@@ -22,6 +22,9 @@ if (process.env.JAWSBD_URL) {
   });
 }
 
+connection.connect();
+module.exports = connection;
+
 // Creating express app and configuring middleware needed for authentication
 var app = express();
 app.use(express.urlencoded({ extended: true }));
