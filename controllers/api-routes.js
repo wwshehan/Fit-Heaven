@@ -42,36 +42,39 @@ module.exports = function(app) {
       // The user is not logged in, send back an empty object
       res.json({});
     } else {
-      db.User.findAll({
+      db.User.findOne({
         where: {
-          email: req.user.email,
-          gender: req.user.gender,
-          level: req.user.level,
-          weight: req.user.weight
+          id: req.user.id
         }
       })
         // Otherwise send back the user's email and id
         // Sending back a password, even a hashed password, isn't a good idea
-        .then(
+        .then(foundUser => {
+          console.log(foundUser);
           res.json({
-            email: req.user.email,
-            id: req.user.id,
-            gender: req.user.gender,
-            level: req.user.level,
-            weight: req.user.weight
-          })
-        );
+            email: foundUser.dataValues.email,
+            gender: foundUser.dataValues.gender,
+            level: foundUser.dataValues.level,
+            weight: foundUser.dataValues.weight
+          });
+        });
     }
   });
 
+  app.get("/api/user_data/:id", function(req, res) {
+    db.User.findByPk(req.params.id)
+      .then(user => res.json(user))
+      .catch(err => res.status(500).json(err));
+  });
+
   app.put("/api/user_data", function(req, res) {
+    console.log(req.user.id);
     db.User.update(req.body, {
       where: {
-        gender: req.body.gender,
-        weight: req.body.weight,
-        level: req.body.level
+        id: req.user.id
       }
     }).then(function(dbUser) {
+      console.log("NEWUSER" + dbUser);
       res.json(dbUser);
     });
   });
