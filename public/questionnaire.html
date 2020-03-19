@@ -299,29 +299,35 @@
 
     })
 
+    function updateUser() {
+      // console.log(answers);
+        $.ajax({
+            method: "PUT",
+            url: "/api/user_data",
+            data: {
+              gender: answers[0],
+              level: answers[3],
+              weight: answers[1]
+            }
+        }).then(() => {
+          window.location.href = './members.html';
+        })
+      }
 
     $(".btn-end").click(function (event) { 
       event.preventDefault();
 
-     window.location.href = './members.html';
-     updateUser(answers);
+    
+     updateUser();
 
     })
 
-    function updateUser(answers) {
-
-      $.ajax({
-        method: "PUT",
-        url: "/api/user_data",
-        data: answers
-      })
-    }
 
     $(".btn-muscle").click(event => {
     event.preventDefault();
 
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: "/api/findExercises",
         data: {
             level: answers[3],

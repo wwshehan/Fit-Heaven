@@ -21,16 +21,12 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: true
     },
-    fitnessLevel: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    username: {
+    level: {
       type: DataTypes.STRING,
       allowNull: true
     },
     weight: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: true
     }
   });
