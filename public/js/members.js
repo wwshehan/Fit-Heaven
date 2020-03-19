@@ -3,8 +3,11 @@ $(document).ready(function() {
   // and updates the HTML on the page
   $.get("/api/user_data").then(function(data) {
     console.log(data);
-    $(".member-name").text(data.email);
+    $(".username")
+      .text(data.email)
+      .replace("@", "");
+    $("#gender").text(data.gender);
     $("#weight").text(data.weight);
+    $("#fitnessLevel").text(data.level);
   });
-  console.log($("#weight").html());
 });
