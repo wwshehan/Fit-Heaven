@@ -3,10 +3,24 @@ var express = require("express");
 var session = require("express-session");
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
+var mysql = require("mysql");
+// eslint-disable-next-line no-unused-vars
+var connection;
 
 // Setting up port and requiring models for syncing
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
+
+if (process.env.JAWSBD_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "Rootroot1",
+    database: "exercises_db"
+  });
+}
 
 // Creating express app and configuring middleware needed for authentication
 var app = express();
