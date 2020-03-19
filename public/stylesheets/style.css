@@ -8,13 +8,13 @@ body {
   text-align: center;
 }
 
-
+/* 
 .navbar { 
   background-color: rgb(61, 166, 252);
   border-bottom: 2.5px solid rgba(248, 190, 82, 0.842);
   font-size: 24px;
   color: white;
-}
+} */
 
 .btn { 
   margin: 5px;
@@ -37,11 +37,13 @@ body {
 
 
 body{
-  background-color: #F9C48E;
+  background-color: rgb(247, 197, 148);
 }
-
+.card{
+  background-color: rgb(250, 220, 190);
+}
 .footer{
-  color: white;
+  color: rgb(61, 166, 252);;
   text-align: center;
 
 }
