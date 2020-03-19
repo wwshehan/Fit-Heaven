@@ -1,11 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
     "password": "root",
-=======
-    "password": "MeStuff!77",
->>>>>>> 978c626df0fc1d85bd6723686199a0e301fa7db6
     "database": "exercises_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
