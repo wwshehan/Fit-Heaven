@@ -46,13 +46,22 @@
       </div>
     </nav>
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col">
-          <h1 class="text-primary text-center">Welcome <span id="username"></span></h1>
+          <h1 class="text-primary text-center">Welcome <span class="username"></span></h1>
         </div>
       </div>
-      <div class="row">
+     <div class="card " style="width: 70% align=center;">
+      <div class="row card-body">
+        <div class="col">
+          <h2 class="text-primary">UserName</h2>
+          <p class="username"></p>
+        </div>
+        <div class="col">
+          <h2 class="text-primary">Gender</h2>
+          <p id="gender"></p>
+        </div>
         <div class="col">
           <h2 class="text-primary">Weight</h2>
           <p id="weight"></p>
@@ -72,8 +81,9 @@
       </div>
       </div>
     </div>
+  </div>
 
-    <footer class="footer bg-primary page-footer fixed-bottom"><p> &#169; Copyright </p><p><a class="
+    <footer class="footer bg-primary page-footer fixed-bottom"><p> &#169; Copyright </br><a class="
       footer" href="contact.html">Contact Us</a></p></footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
