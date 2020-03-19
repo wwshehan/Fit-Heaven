@@ -80,14 +80,25 @@ module.exports = function(app) {
   });
 
   app.get("/api/findExercises", (req, res) => {
-    db.Exercise.findAll({
+    db.User.findOne({
       where: {
-        muscle: req.query.muscle,
-        level: req.query.level,
-        equipment: req.query.equipment
+        id: req.user.id
       }
-    }).then(arrayOfExercises => {
-      res.json(arrayOfExercises);
+    }).then(results => {
+      console.log(results);
+      if (!results.dataValues.level) {
+        res.json({});
+      } else {
+        db.Exercise.findAll({
+          where: {
+            muscle: "chest",
+            level: results.dataValues.level
+          }
+        }).then(arrayOfExercises => {
+          console.log(arrayOfExercises);
+          res.json(arrayOfExercises);
+        });
+      }
     });
   });
 };
