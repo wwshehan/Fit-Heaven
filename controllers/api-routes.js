@@ -50,15 +50,19 @@ module.exports = function(app) {
       });
     }
   });
-  // app.get("/api/exercises/:muscle", function(req, res) {
-  // db.Exercise.findAll({
-  //   where: {
-  //     muscle: req.params.muscle
-  // }
-  //   }).then(function(dbMuscle) {
-  //     res.json(dbMuscle);
-  //   });
-  // });
+
+  app.put("/api/user_data", function(req, res) {
+    db.User.update(req.body, {
+      where: {
+        gender: req.body.gender,
+        weight: req.body.weight,
+        level: req.body.level
+      }
+    }).then(function(dbUser) {
+      res.json(dbUser);
+    });
+  });
+
   app.get("/api/findExercises", (req, res) => {
     db.Exercise.findAll({
       // console.log(req.query.name);
