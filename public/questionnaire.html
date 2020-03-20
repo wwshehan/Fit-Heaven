@@ -8,28 +8,19 @@
   <meta name="viewport" content="width=device-width, initial-scale =1">
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"> -->
   <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap" rel="stylesheet">
-  <link
-  rel="stylesheet"
-  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-  crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <link href="stylesheets/style.css" rel="stylesheet">
 
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg bg-primary navbar-dark" >
+  <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
     <a class="navbar-brand" href="./members.html">
       <img src="/images/logo.jpg">
     </a>
-    <button
-      class="navbar-toggler bg-light"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation">
+    <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -49,23 +40,23 @@
 
 
   <div id="questionBox" class="jumbotron">
-    <form method="POST" action="members.html" >
-    <div class="first">
-      <form action="POST" action="members.html">
-        Gender:
-        <br><br>
-        <button type="button" class="btn-gender btn-primary">Male</button> <br><br>
+    <form method="POST" action="members.html">
+      <div class="first">
+        <form action="POST" action="members.html">
+          Gender:
+          <br><br>
+          <button type="button" class="btn-gender btn-primary">Male</button> <br><br>
 
-        <button type="button" class="btn-gender btn-primary">Female</button> <br><br>
-      </form>
-    </div>
+          <button type="button" class="btn-gender btn-primary">Female</button> <br><br>
+        </form>
+      </div>
 
-    <form style="text-align: left;">
-    <div class="second" style="display: none;">
-      
-        <div class="col-auto" style="padding-left: 0px;">
-          <div class="form-check mb-2" style="padding-left: 0px;">
-            <h2 id = "enterANumber" style="color: red; display: none;"">Please enter a valid number!</h2>
+      <form style="text-align: left;">
+        <div class="second" style="display: none;">
+
+          <div class="col-auto" style="padding-left: 0px;">
+            <div class="form-check mb-2" style="padding-left: 0px;">
+              <h2 id="enterANumber" style="color: red; display: none;"">Please enter a valid number!</h2>
 
             Please Enter Your Weight:
 
@@ -73,40 +64,41 @@
           </div>
         </div>
 
-        <div class="form-row align-items-center">
+        <div class=" form-row align-items-center">
 
-          <div class="col-auto">
-
-
-            <input type="number" class="form-control" required ="required" id="inlineFormInputGroup" placeholder="">
-
-          </div>
-        </div>
-
-        <div class="col-auto">
-          <button type="submit" class="btn-weight btn-primary mb-2">Submit</button>
-        </div>
-        </form>
-    </div>
+                <div class="col-auto">
 
 
+                  <input type="number" class="form-control" required="required" id="inlineFormInputGroup"
+                    placeholder="">
 
-    <div class="third" style="display: none;">
+                </div>
+            </div>
+
+            <div class="col-auto">
+              <button type="submit" class="btn-weight btn-primary mb-2">Submit</button>
+            </div>
+      </form>
+  </div>
+
+  <div class="third" style="display: none;">
+    <form id="atLeastOneTest">
+      <h2 id="selectAtLeastOne" style="color: red; display: none;">Please select a piece of equipment!</h2>
       Please select which equipment you have access to: <br><br>
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="bodyweight" id="defaultCheckBody">
+        <input class="form-check-input" type="checkbox" name="bodyweight" id="defaultCheckBody" required>
         <label class="form-check-label" for="defaultCheck1">
           Bodyweight
         </label><br>
-        <input class="form-check-input" type="checkbox" name="dumbbell" id="defaultCheckDumbbell">
+        <input class="form-check-input" type="checkbox" name="dumbbell" id="defaultCheckDumbbell" required>
         <label class="form-check-label" for="defaultCheck1">
           Dumbbell
         </label><br>
-        <input class="form-check-input" type="checkbox" name="barbell" id="defaultCheckBarbell">
+        <input class="form-check-input" type="checkbox" name="barbell" id="defaultCheckBarbell" required>
         <label class="form-check-label" for="defaultCheck1">
           Barbell
         </label><br>
-        <input class="form-check-input" type="checkbox" name="cable/machine" id="defaultCheckCableMachine">
+        <input class="form-check-input" type="checkbox" name="cable/machine" id="defaultCheckCableMachine" required>
         <label class="form-check-label" for="defaultCheck1">
           Cable/Machine
         </label><br>
@@ -115,64 +107,64 @@
 
       </div>
 
-    </div>
+  </div>
+  </form>
+  <div class="fourth" style="display:none;">
+    Please select a level of fitness:
+    <br><br>
+    <button type="button" class="btn-level btn-primary">Beginner</button> <br><br>
 
-    <div class="fourth" style="display:none;">
-      Please select a level of fitness:
-      <br><br>
-      <button type="button" class="btn-level btn-primary">Beginner</button> <br><br>
+    <button type="button" class="btn-level btn-primary">Moderate</button> <br><br>
 
-      <button type="button" class="btn-level btn-primary">Moderate</button> <br><br>
+    <button type="button" class="btn-level btn-primary">Advanced</button> <br><br>
 
-      <button type="button" class="btn-level btn-primary">Advanced</button> <br><br>
+  </div>
 
-    </div>
+  <div class="fifth" style="display:none;">
+    Please select which muscle(s) you have wish to focus on: <br><br>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="chest" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">
+        Chest
+      </label><br>
+      <input class="form-check-input" type="checkbox" name="back" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">
+        Back
+      </label><br>
+      <input class="form-check-input" type="checkbox" name="legs" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">
+        Legs
+      </label><br>
+      <input class="form-check-input" type="checkbox" name="shoulders" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">
+        Shoulders
+      </label><br>
+      <input class="form-check-input" type="checkbox" name="biceps" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">
+        Biceps
+      </label><br>
+      <input class="form-check-input" type="checkbox" name="triceps" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">
+        Triceps
+      </label><br>
+      <input class="form-check-input" type="checkbox" name="abs" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">
+        Abs
+      </label><br>
 
-    <div class="fifth" style="display:none;">
-      Please select which muscle(s) you have wish to focus on: <br><br>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="chest" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Chest
-        </label><br>
-        <input class="form-check-input" type="checkbox" name="back" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Back
-        </label><br>
-        <input class="form-check-input" type="checkbox" name="legs" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Legs
-        </label><br>
-        <input class="form-check-input" type="checkbox" name="shoulders" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Shoulders
-        </label><br>
-        <input class="form-check-input" type="checkbox" name="biceps" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Biceps
-        </label><br>
-        <input class="form-check-input" type="checkbox" name="triceps" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Triceps
-        </label><br>
-        <input class="form-check-input" type="checkbox" name="abs" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Abs
-        </label><br>
-
-        <button type="submit" class="btn-muscle btn-primary mb-2">Submit</button>
-
-      </div>
-
+      <button type="submit" class="btn-muscle btn-primary mb-2">Submit</button>
 
     </div>
 
-    <div class="sixth" style="display: none; text-align: center;">
-      <br><br><br><br>
-      <button type="submit" class="btn-end btn-primary mb-2">Complete Questionnaire</button>
-    </div>
 
-    </form>
+  </div>
+
+  <div class="sixth" style="display: none; text-align: center;">
+    <br><br><br><br>
+    <button type="submit" class="btn-end btn-primary mb-2">Complete Questionnaire</button>
+  </div>
+
+  </form>
   </div>
 
 
@@ -189,7 +181,9 @@
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/a4101eefc4.js" crossorigin="anonymous">
   </script>
 
@@ -211,7 +205,7 @@
       $(".first").hide();
       $(".second").show();
 
-      
+
       answers.push(this.innerText);
 
       console.log(answers);
@@ -226,15 +220,13 @@
 
       let x = $("#inlineFormInputGroup").val();
 
-      if(x === NaN || x === "" || x <= 0) { 
+      if (x === NaN || x === "" || x <= 0) {
         $("#enterANumber").show();
         $(".third").hide();
         $(".second").show();
+      } else {
+        answers.push(x);
       }
-
-      answers.push(x);
-      console.log(answers);
-
     })
 
     $(".btn-equip").click(function (event) {
@@ -244,33 +236,47 @@
       $(".third").hide();
       $(".fourth").show();
 
+      let atLeastOneIsChecked = $("input:checkbox").is(":checked");
+
       let bodyweight = $('input[name="bodyweight"]:checked').serialize();
+      console.log(bodyweight);
       let dumbbell = $('input[name="dumbbell"]:checked').serialize();
       let barbell = $('input[name="barbell"]:checked').serialize();
       let cableMachine = $('input[name="cable/machine"]:checked').serialize();
 
+      if (atLeastOneIsChecked === true) {
+        if (bodyweight != "") {
 
+          answers.push("bodyweight");
+        }
 
-      if (bodyweight != "") {
+        if (dumbbell != "") {
 
-        answers.push("bodyweight");
+          answers.push("dumbbell");
+        }
+
+        if (barbell != "") {
+
+          answers.push("barbell");
+        }
+
+        if (cableMachine != "") {
+          answers.push("cable/machine");
+        }
+      } else {
+        $("#selectAtLeastOne").show();
+        $(".fourth").hide();
+        $(".third").show();
       }
 
-      if (dumbbell != "") {
-
-        answers.push("dumbbell");
-      }
-
-      if (barbell != "") {
-
-        answers.push("barbell");
-      }
-
-      if (cableMachine != "") {
-        answers.push("cable/machine");
-      }
 
 
+      // if ($("#atLeastOneTest input:checked").length < 0) {
+      //   console.log("test");
+      //   // $("#selectAtLeastOne").show();
+      //   // $(".fourth").hide();
+      //   // $(".third").show();
+      // }
 
     })
 
@@ -345,29 +351,29 @@
 
     function updateUser() {
       console.log({
-              gender: answers[0],
-              level: answers[3],
-              weight: answers[1]
-            });
-        $.ajax({
-            method: "PUT",
-            url: "/api/user_data",
-            data: {
-              gender: answers[0],
-              level: answers[3],
-              weight: answers[1]
-            }
-        }).then(() => {
-          window.location.href = './members.html';
-          
-        })
-      }
+        gender: answers[0],
+        level: answers[3],
+        weight: answers[1]
+      });
+      $.ajax({
+        method: "PUT",
+        url: "/api/user_data",
+        data: {
+          gender: answers[0],
+          level: answers[3],
+          weight: answers[1]
+        }
+      }).then(() => {
+        window.location.href = './members.html';
+
+      })
+    }
 
     $(".btn-end").click(function (event) {
       event.preventDefault();
 
-    
-     updateUser();
+
+      updateUser();
 
     })
 
@@ -375,7 +381,7 @@
     $(".btn-muscle").click(event => {
       event.preventDefault();
 
-    $.ajax({
+      $.ajax({
         type: "GET",
         url: "/api/findExercises",
         data: {
