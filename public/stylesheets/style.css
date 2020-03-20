@@ -6,6 +6,7 @@ form.login {
 body { 
   background-color: white(228, 227, 253);
   text-align: center;
+  color:rgb(61, 166, 252);
 }
 
 
@@ -43,12 +44,14 @@ nav {
 
 body{
   background-color: rgb(247, 197, 148);
+  font-family: 'Playfair Display', serif;
+
 }
 .card{
   background-color: rgb(250, 220, 190);
 }
 .footer{
-  color: rgb(61, 166, 252);;
+  color: rgb(61, 166, 252);
   text-align: center;
 
 }
