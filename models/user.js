@@ -36,13 +36,10 @@ module.exports = function(sequelize, DataTypes) {
     equipment: {
       type: DataTypes.STRING,
       allowNull: true
-<<<<<<< HEAD
-=======
     },
     name: {
       type: DataTypes.STRING,
       allowNull: true
->>>>>>> bb149b87aff2b3a636deba7f47f3aab2ba971ca6
     }
   });
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
