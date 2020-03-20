@@ -39,6 +39,9 @@ $(document).ready(function() {
     $("#gender").text(data.gender);
     $("#weight").text(data.weight);
     $("#fitnessLevel").text(data.level);
+    $("#name").text(data.name);
+    $("#muscle").text(data.muscle);
+    $("#equipment").text(data.equipment);
     getExercises();
   });
 });
