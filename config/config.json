@@ -1,7 +1,12 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "MeStuff!77",
+=======
+    "password": "root",
+
+>>>>>>> cfe7956f5abc969577c47edc7b787246c744ee3a
     "database": "exercises_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -14,7 +19,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
+    "use_env_variable":"JAWSDB_URL",
     "dialect": "mysql"
   }
 }
