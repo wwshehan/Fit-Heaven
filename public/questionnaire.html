@@ -52,7 +52,7 @@
       <form style="text-align: left;">
         <div class="second" style="display: none;">
 
-          <div class="col-auto" style="padding-left: 0px;">
+          <div class="col-auto" >
             <div class="form-check mb-2" style="padding-left: 0px;">
               <h2 id="enterANumber" style="color: red; display: none;"">Please enter a valid number!</h2>
 
@@ -362,23 +362,25 @@
 
     function updateUser() {
       console.log({
-        gender: answers[0],
-        level: answers[3],
-        weight: answers[1]
-      });
-      $.ajax({
-        method: "PUT",
-        url: "/api/user_data",
-        data: {
-          gender: answers[0],
-          level: answers[3],
-          weight: answers[1]
-        }
-      }).then(() => {
-        window.location.href = './members.html';
-
-      })
-    }
+              gender: answers[0],
+              level: answers[3],
+              weight: answers[1]
+            });
+        $.ajax({
+            method: "PUT",
+            url: "/api/user_data",
+            data: {
+              gender: answers[0],
+              level: answers[3],
+              weight: answers[1],
+              muscle: answers[4],
+              equipment: answers[2]
+            }
+        }).then(() => {
+          window.location.href = './members.html';
+          
+        })
+      }
 
     $(".btn-end").click(function (event) {
       event.preventDefault();
