@@ -74,7 +74,6 @@ module.exports = function(app) {
         id: req.user.id
       }
     }).then(function(dbUser) {
-      console.log("NEWUSER" + dbUser);
       res.json(dbUser);
     });
   });
