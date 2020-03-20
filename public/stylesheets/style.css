@@ -15,26 +15,31 @@ nav {
   border-bottom: 2.5px solid rgba(248, 190, 82, 0.842);
   font-size: 24px;
   color: white;
+  margin-bottom: 15px;
 }
 
-.btn { 
-  margin: 5px;
+.btn-primary { 
+  margin-top: 20px;
 }
 
+/* .btn-weight { 
+  margin-top: 15px;
+} */
 
 #questionBox { 
   background-color: whitesmoke;
-  width: 45%;
-  height: 450px;
+  width: 55%;
+  height: 490px;
   margin: auto;
   border-radius: 5%;
   border: 2px solid rgb(255, 231, 187);
   color: black;
   font-size: 24px;
   font-family: 'Baloo Da 2', cursive;
-  padding: 15px;
+  padding: 25px;
   text-align: left;
 }
+
 
 
 body{
