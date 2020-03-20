@@ -109,6 +109,7 @@
 
   </div>
   </form>
+
   <div class="fourth" style="display:none;">
     Please select a level of fitness:
     <br><br>
@@ -121,42 +122,44 @@
   </div>
 
   <div class="fifth" style="display:none;">
-    Please select which muscle(s) you have wish to focus on: <br><br>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" name="chest" id="defaultCheck1">
-      <label class="form-check-label" for="defaultCheck1">
-        Chest
-      </label><br>
-      <input class="form-check-input" type="checkbox" name="back" id="defaultCheck1">
-      <label class="form-check-label" for="defaultCheck1">
-        Back
-      </label><br>
-      <input class="form-check-input" type="checkbox" name="legs" id="defaultCheck1">
-      <label class="form-check-label" for="defaultCheck1">
-        Legs
-      </label><br>
-      <input class="form-check-input" type="checkbox" name="shoulders" id="defaultCheck1">
-      <label class="form-check-label" for="defaultCheck1">
-        Shoulders
-      </label><br>
-      <input class="form-check-input" type="checkbox" name="biceps" id="defaultCheck1">
-      <label class="form-check-label" for="defaultCheck1">
-        Biceps
-      </label><br>
-      <input class="form-check-input" type="checkbox" name="triceps" id="defaultCheck1">
-      <label class="form-check-label" for="defaultCheck1">
-        Triceps
-      </label><br>
-      <input class="form-check-input" type="checkbox" name="abs" id="defaultCheck1">
-      <label class="form-check-label" for="defaultCheck1">
-        Abs
-      </label><br>
+    <form id="atLeastOne">
+      <h2 id="selectAtLeastOneMuscle" style="color: red; display: none;"">Please select a muscle!</h2>
+    Please select which muscle(s) you wish to focus on: <br><br>
+    <div class=" form-check">
+        <input class="form-check-input" type="checkbox" name="chest" id="defaultCheck1" required>
+        <label class="form-check-label" for="defaultCheck1">
+          Chest
+        </label><br>
+        <input class="form-check-input" type="checkbox" name="back" id="defaultCheck1" required>
+        <label class="form-check-label" for="defaultCheck1">
+          Back
+        </label><br>
+        <input class="form-check-input" type="checkbox" name="legs" id="defaultCheck1" required>
+        <label class="form-check-label" for="defaultCheck1">
+          Legs
+        </label><br>
+        <input class="form-check-input" type="checkbox" name="shoulders" id="defaultCheck1" required>
+        <label class="form-check-label" for="defaultCheck1">
+          Shoulders
+        </label><br>
+        <input class="form-check-input" type="checkbox" name="biceps" id="defaultCheck1" required>
+        <label class="form-check-label" for="defaultCheck1">
+          Biceps
+        </label><br>
+        <input class="form-check-input" type="checkbox" name="triceps" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Triceps
+        </label><br>
+        <input class="form-check-input" type="checkbox" name="abs" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Abs
+        </label><br>
 
-      <button type="submit" class="btn-muscle btn-primary mb-2">Submit</button>
+        <button type="submit" class="btn-muscle btn-primary mb-2">Submit</button>
 
-    </div>
+  </div>
 
-
+  </form>
   </div>
 
   <div class="sixth" style="display: none; text-align: center;">
@@ -264,20 +267,10 @@
           answers.push("cable/machine");
         }
       } else {
-        $("#selectAtLeastOne").show();
-        $(".fourth").hide();
-        $(".third").show();
+        $("#selectAtLeastOneMuscle").show();
+        $(".sixth").hide();
+        $(".fifth").show();
       }
-
-
-
-      // if ($("#atLeastOneTest input:checked").length < 0) {
-      //   console.log("test");
-      //   // $("#selectAtLeastOne").show();
-      //   // $(".fourth").hide();
-      //   // $(".third").show();
-      // }
-
     })
 
     $(".btn-level").click(function (event) {
@@ -304,6 +297,8 @@
       $(".sixth").show();
 
 
+
+
       let chest = $('input[name="chest"]:checked').serialize();
       let back = $('input[name="back"]:checked').serialize();
       let legs = $('input[name="legs"]:checked').serialize();
@@ -314,38 +309,55 @@
 
 
 
-      if (chest != "") {
 
-        answers.push("chest");
+      let atLeastOneIsChecked = $("input:checked").length;
+      console.log(atLeastOneIsChecked);
+
+      if (atLeastOneIsChecked > 1) {
+
+        if (chest != "") {
+
+          answers.push("chest");
+        }
+
+        if (back != "") {
+
+          answers.push("back");
+        }
+
+        if (legs != "") {
+
+          answers.push("legs");
+        }
+
+        if (shoulders != "") {
+          answers.push("shoulders");
+        }
+
+        if (biceps != "") {
+
+          answers.push("biceps");
+        }
+
+        if (triceps != "") {
+
+          answers.push("triceps");
+        }
+
+        if (abs != "") {
+          answers.push("abs");
+        }
+
+      } else {
+        $("#selectAtLeastOneMuscle").show();
+        $(".sixth").hide();
+        $(".fifth").show();
+
       }
 
-      if (back != "") {
 
-        answers.push("back");
-      }
 
-      if (legs != "") {
 
-        answers.push("legs");
-      }
-
-      if (shoulders != "") {
-        answers.push("shoulders");
-      }
-
-      if (biceps != "") {
-
-        answers.push("biceps");
-      }
-
-      if (triceps != "") {
-
-        answers.push("triceps");
-      }
-
-      if (abs != "") {
-        answers.push("abs");
-      }
 
     })
 
