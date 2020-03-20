@@ -1,9 +1,6 @@
 
   # Fit Heaven
-  <img src="./images/main.png" width='100px' />
-  <img src="./images/login.png" width='100px' />
-  <img src="./images/signIn.png" width='100px' />
-
+![Fit heaven screen shot](./images/main.jpg)
 
 
   ![user badge](https://img.shields.io/badge/license-MIT-red)
