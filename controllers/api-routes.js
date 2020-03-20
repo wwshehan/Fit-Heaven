@@ -90,9 +90,8 @@ module.exports = function(app) {
       } else {
         db.Exercise.findAll({
           where: {
-            muscle: results.dataValues.muscle,
-            level: results.dataValues.level,
-            equipment: results.dataValues.equipment
+            muscle: "chest",
+            level: results.dataValues.level
           }
         }).then(arrayOfExercises => {
           console.log(arrayOfExercises);
