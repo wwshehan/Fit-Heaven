@@ -74,7 +74,6 @@ module.exports = function(app) {
         id: req.user.id
       }
     }).then(function(dbUser) {
-      console.log("NEWUSER" + dbUser);
       res.json(dbUser);
     });
   });
@@ -91,8 +90,9 @@ module.exports = function(app) {
       } else {
         db.Exercise.findAll({
           where: {
-            muscle: "chest",
-            level: results.dataValues.level
+            muscle: results.dataValues.muscle,
+            level: results.dataValues.level,
+            equipment: results.dataValues.equipment
           }
         }).then(arrayOfExercises => {
           console.log(arrayOfExercises);

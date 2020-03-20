@@ -36,10 +36,9 @@ $(document).ready(function() {
   }
 
   function handleLoginErr(err) {
-    $("#alert .msg").text(
-      err.statusText.replace("Unauthorized", "Username taken!")
-    );
     console.log(err);
+
+    $("#alert .msg").text(err.responseJSON.errors[0].message);
     $("#alert").fadeIn(500);
   }
 });
