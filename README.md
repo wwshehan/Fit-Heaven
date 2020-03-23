@@ -1,6 +1,6 @@
 
   # Fit Heaven
-![Fit heaven screen shot](./images/main.jpg)
+![Fit heaven screen shot](./public/images/main.jpg)
 
 
   ![user badge](https://img.shields.io/badge/license-MIT-red)
